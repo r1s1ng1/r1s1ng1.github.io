@@ -67,17 +67,6 @@
             audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
         }
 
-
-        audio.addEventListener("play", function() {
-            playButton.textContent = "||";
-        });
-
-
-        audio.addEventListener("pause", function() {
-            playButton.textContent = "▷";
-        });
-
-
         function formatTime(seconds) {
             if (isNaN(seconds)) {
                 return "0:00";
