@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 400;
     margin: 0;
 }
@@ -33,7 +33,7 @@ a {
     color: white;
     text-decoration: none;
     margin: 20px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 a:hover {
@@ -41,20 +41,4 @@ a:hover {
 }
     opacity: 0.5;
     margin-top: 5px;
-}
-
-nav {
-    margin-top: 50px;
-}
-
-a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    margin: 20px;
-    font-size: 1.4rem;
-}
-
-a:hover {
-    opacity: 0.6;
 }
