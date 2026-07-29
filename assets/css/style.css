@@ -66,3 +66,6 @@ button:hover {
     align-items: center;
     gap: 8px;
 }
+.info {
+    margin-top: 50px;
+}
