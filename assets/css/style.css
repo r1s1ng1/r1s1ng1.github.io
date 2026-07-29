@@ -1,1 +1,25 @@
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
 
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 15px;
+}
