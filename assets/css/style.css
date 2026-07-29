@@ -7,10 +7,24 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     text-align: center;
+}
+
+header {
+    padding-top: 30px;
+}
+
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    padding-bottom: 30px;
 }
 
 h1 {
@@ -33,7 +47,7 @@ a {
     color: white;
     text-decoration: none;
     margin: 20px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 a:hover {
