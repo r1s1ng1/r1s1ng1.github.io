@@ -58,12 +58,6 @@
         }
 
 
-        function stopAudio() {
-            audio.pause();
-            audio.currentTime = 0;
-        }
-
-
         function rewind() {
             audio.currentTime = Math.max(0, audio.currentTime - 10);
         }
@@ -71,12 +65,6 @@
 
         function forward() {
             audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
-        }
-
-
-        function restart() {
-            audio.currentTime = 0;
-            audio.play();
         }
 
 
