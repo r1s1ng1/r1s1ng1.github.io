@@ -42,3 +42,17 @@ a:hover {
     opacity: 0.5;
     margin-top: 5px;
 }
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.6;
+}
