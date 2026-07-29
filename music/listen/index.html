@@ -23,9 +23,9 @@
         </audio>
 
         <div class="player-controls">
-    <button onclick="rewind()"><<</button>
-    <button id="playButton" onclick="togglePlay()">⏯</button>
-    <button onclick="forward()">>></button>
+    <button onclick="rewind()">⏪</button>
+    <button id="playButton" onclick="togglePlay()">▶</button>
+    <button onclick="forward()">⏩</button>
     </div>
 
         <p id="time">
@@ -110,6 +110,13 @@
                 formatTime(duration);
         }
 
+        audio.addEventListener("play", function() {
+    playButton.textContent = "⏸";
+});
+
+audio.addEventListener("pause", function() {
+    playButton.textContent = "▶";
+});
 
         audio.addEventListener("timeupdate", updateProgress);
         audio.addEventListener("loadedmetadata", updateProgress);
