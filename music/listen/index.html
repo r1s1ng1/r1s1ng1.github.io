@@ -19,12 +19,20 @@
             Latest - (Title)
         </p>
 
-        <p>
-            □ &nbsp;&nbsp; << &nbsp; Ⅱ &nbsp; >> &nbsp; ↺
-        </p>
+        <audio id="player">
+            <source src="../../assets/audio/latest.mp3" type="audio/mpeg">
+        </audio>
 
         <p>
-            0:31 ━|──────── 3:13
+            <button onclick="stopAudio()">[]</button>
+            <button onclick="rewind()"><<</button>
+            <button id="playButton" onclick="togglePlay()">▶</button>
+            <button onclick="forward()">>></button>
+            <button onclick="restart()">↺</button>
+        </p>
+
+        <p id="time">
+            0:00 |────────── 0:00
         </p>
 
         <br>
@@ -33,6 +41,106 @@
         <a href="#">SoundCloud</a>
 
     </nav>
+
+
+    <script>
+
+        const audio = document.getElementById("player");
+        const timeDisplay = document.getElementById("time");
+        const playButton = document.getElementById("playButton");
+
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+
+        function stopAudio() {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+
+        function rewind() {
+            audio.currentTime = Math.max(0, audio.currentTime - 10);
+        }
+
+
+        function forward() {
+            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+        }
+
+
+        function restart() {
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+
+        audio.addEventListener("play", function() {
+            playButton.textContent = "||";
+        });
+
+
+        audio.addEventListener("pause", function() {
+            playButton.textContent = "▷";
+        });
+
+
+        function formatTime(seconds) {
+            if (isNaN(seconds)) {
+                return "0:00";
+            }
+
+            let minutes = Math.floor(seconds / 60);
+            let remainingSeconds = Math.floor(seconds % 60);
+
+            if (remainingSeconds < 10) {
+                remainingSeconds = "0" + remainingSeconds;
+            }
+
+            return minutes + ":" + remainingSeconds;
+        }
+
+
+        function updateProgress() {
+
+            let current = audio.currentTime;
+            let duration = audio.duration;
+
+            let progress = 0;
+
+            if (!isNaN(duration)) {
+                progress = current / duration;
+            }
+
+            let totalBars = 10;
+            let filledBars = Math.floor(progress * totalBars);
+
+            let bar =
+                "━".repeat(filledBars) +
+                "|" +
+                "─".repeat(totalBars - filledBars);
+
+
+            timeDisplay.textContent =
+                formatTime(current) +
+                " " +
+                bar +
+                " " +
+                formatTime(duration);
+        }
+
+
+        audio.addEventListener("timeupdate", updateProgress);
+        audio.addEventListener("loadedmetadata", updateProgress);
+
+
+    </script>
 
 </body>
 </html>
