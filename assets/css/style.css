@@ -38,6 +38,7 @@ a {
 
 a:hover {
     opacity: 0.6;
+}
 button {
     all: unset;
 
@@ -65,5 +66,5 @@ button:hover {
     gap: 8px;
 }
 #playButton {
-    transform: translate(-1px, -1px);
+    transform: translate(-2px, -2px);
 }
