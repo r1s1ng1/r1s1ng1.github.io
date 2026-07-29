@@ -39,15 +39,14 @@ a {
 a:hover {
     opacity: 0.6;
 }
-    opacity: 0.5;
-    margin-top: 5px;
-}
+
 button {
     appearance: none;
     -webkit-appearance: none;
 
-    background: transparent;
-    border: none;
+    background: none;
+    border: 0;
+    outline: none;
 
     color: white;
     font-family: Arial, sans-serif;
@@ -57,4 +56,10 @@ button {
     margin: 0 8px;
 
     cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:hover {
+    opacity: 0.6;
 }
