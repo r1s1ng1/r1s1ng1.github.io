@@ -7,24 +7,10 @@ body {
 
     display: flex;
     flex-direction: column;
-
-    text-align: center;
-}
-
-header {
-    padding-top: 30px;
-}
-
-main {
-    flex: 1;
-
-    display: flex;
     justify-content: center;
     align-items: center;
-}
 
-footer {
-    padding-bottom: 30px;
+    text-align: center;
 }
 
 h1 {
@@ -34,6 +20,25 @@ h1 {
 }
 
 p {
+    opacity: 0.5;
+    margin-top: 5px;
+}
+
+nav {
+    margin-top: 50px;
+}
+
+a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    opacity: 0.6;
+}
     opacity: 0.5;
     margin-top: 5px;
 }
