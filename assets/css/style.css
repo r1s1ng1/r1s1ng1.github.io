@@ -34,19 +34,21 @@ a {
     text-decoration: none;
     margin: 20px;
     font-size: 1.5rem;
-a,
+}
+
 a:visited {
-    opacity: 0.4;
+    color: white;
     text-decoration: none;
 }
 
 a:hover {
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 a:active {
-    opacity: 0.4;
+    opacity: 0.6;
 }
+
 
 button {
     all: unset;
@@ -56,6 +58,7 @@ button {
     align-items: center;
 
     width: 30px;
+    height: 30px;
 
     color: white;
     font-family: Arial, sans-serif;
@@ -68,12 +71,37 @@ button:hover {
     opacity: 0.6;
 }
 
+
 .player-controls {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
 }
+
+
+.player-controls button {
+    all: unset;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+.player-controls button:hover {
+    opacity: 0.6;
+}
+
+
 .info {
     margin-top: 50px;
 }
