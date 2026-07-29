@@ -64,3 +64,6 @@ button:hover {
     align-items: center;
     gap: 8px;
 }
+#playButton {
+    transform: translate(-1px, -1px);
+}
