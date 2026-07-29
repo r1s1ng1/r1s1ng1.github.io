@@ -23,15 +23,13 @@
         </audio>
 
         <div class="player-controls">
-    <button onclick="stopAudio()">□</button>
     <button onclick="rewind()"><<</button>
     <button id="playButton" onclick="togglePlay()">▷</button>
     <button onclick="forward()">>></button>
-    <button onclick="restart()">↺</button>
     </div>
 
         <p id="time">
-            0:00 |────────── 0:00
+            0:00 ────────── 0:00
         </p>
 
         <br>
@@ -124,7 +122,6 @@
 
             let bar =
                 "━".repeat(filledBars) +
-                "|" +
                 "─".repeat(totalBars - filledBars);
 
 
