@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    paddinf-top: 100px;
+    padding-top: calc(100px + env(safe-area-inset-top));
 
     text-align: center;
 }
