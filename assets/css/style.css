@@ -107,3 +107,17 @@ button:hover {
 .info {
     margin-top: 50px;
 }
+.log {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.log h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.log p {
+    margin-top: 10px;
+}
