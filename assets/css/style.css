@@ -10,7 +10,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding-top: calc(200px + env(safe-area-inset-top));
-padding-bottom: calc(25px + env(safe-area-inset-bottom));
+    padding-bottom: calc(25px + env(safe-area-inset-bottom));
 
     text-align: center;
 }
