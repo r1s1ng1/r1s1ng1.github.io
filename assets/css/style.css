@@ -134,12 +134,6 @@ button:hover {
 .log p {
     margin-top: 10px;
 }
-body.loaded {
-    opacity: 1;
-}
-body.fade-out {
-    opacity: 0;
-}
 body.landing {
     background-position: 14% 50%;
 }
