@@ -15,15 +15,16 @@ body {
     text-align: center;
 
 background-image: linear-gradient(
-        120deg,
-        hsl(285, 70%, 15%),
-        hsl(195, 70%, 15%),
-        hsl(30, 70%, 15%),
-        hsl(0, 70%, 15%),
-        hsl(185, 70%, 15%),
-        hsl(115, 60%, 15%),
-        hsl(285, 70%, 15%)
-    );
+    120deg,
+    hsl(275, 85%, 16%),  /* Purple */
+    hsl(220, 90%, 15%),  /* Blue */
+    hsl(185, 90%, 16%),  /* Cyan */
+    hsl(350, 85%, 15%),  /* Red */
+    hsl(325, 85%, 16%),  /* Pink */
+    hsl(110, 75%, 15%),  /* Green */
+    hsl(50, 90%, 15%),   /* Yellow */
+    hsl(275, 85%, 16%)   /* Back to Purple */
+);
 
     background-size: 700% 700%;
     background-repeat: no-repeat;
@@ -141,27 +142,27 @@ body.landing {
 }
 
 body.digital {
-    background-position: 14% 50%;
+    background-position: 16% 50%;
 }
 
 body.vocal {
-    background-position: 28% 50%;
+    background-position: 32% 50%;
 }
 
 body.music {
-    background-position: 42% 50%;
+    background-position: 48% 50%;
 }
 
 body.media {
-    background-position: 56% 50%;
+    background-position: 64% 50%;
 }
 
 body.code {
-    background-position: 70% 50%;
+    background-position: 80% 50%;
 }
 
 body.log {
-    background-position: 84% 50%;
+    background-position: 96% 50%;
 }
 body.loaded {
     opacity: 1;
