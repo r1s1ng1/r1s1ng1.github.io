@@ -25,7 +25,6 @@ body {
     hsl(285, 70%, 15%)
 );
 background-size: 700% 700%;
-background-position: 14% 50%;
 background-repeat: no-repeat;
 background-attachment: fixed;
 }
@@ -139,4 +138,31 @@ body.loaded {
 }
 body.fade-out {
     opacity: 0;
+}
+body.landing {
+    background-position: 14% 50%;
+}
+
+body.digital {
+    background-position: 14% 50%;
+}
+
+body.vocal {
+    background-position: 14% 50%;
+}
+
+body.music {
+    background-position: 14% 50%;
+}
+
+body.media {
+    background-position: 14% 50%;
+}
+
+body.code {
+    background-position: 14% 50%;
+}
+
+body.log {
+    background-position: 14% 50%;
 }
