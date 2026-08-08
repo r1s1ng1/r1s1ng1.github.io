@@ -1,6 +1,12 @@
-window.addEventListener("load", function() {
+function showPage() {
+    document.body.classList.remove("fade-out");
     document.body.classList.add("loaded");
+}
+
+window.addEventListener("pageshow", function() {
+    showPage();
 });
+
 
 document.querySelectorAll("a").forEach(function(link) {
     link.addEventListener("click", function(event) {
