@@ -163,3 +163,10 @@ body.code {
 body.log {
     background-position: 84% 50%;
 }
+body.loaded {
+    opacity: 1;
+}
+
+body.fade-out {
+    opacity: 0;
+}
