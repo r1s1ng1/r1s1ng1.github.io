@@ -14,20 +14,16 @@ body {
 
     text-align: center;
 
-background-image: linear-gradient(
-    120deg,
-    hsl(275, 80%, 16%),  /* Purple */
-    hsl(175, 85%, 14%),  /* Teal */
-    hsl(25, 90%, 16%),   /* Orange */
-    hsl(350, 85%, 15%),  /* Red */
-    hsl(190, 90%, 16%),  /* Cyan */
-    hsl(220, 85%, 15%),  /* Blue */
-    hsl(105, 75%, 15%),  /* Green */
-    hsl(275, 80%, 16%)   /* Back to Purple */
-);
-background-size: 700% 700%;
-background-repeat: no-repeat;
-background-attachment: fixed;
+    background-image: linear-gradient(
+        135deg,
+        hsl(0, 80%, 15%),
+        hsl(275, 70%, 15%),
+        hsl(220, 80%, 15%)
+    );
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -133,31 +129,4 @@ button:hover {
 
 .log p {
     margin-top: 10px;
-}
-body.landing {
-    background-position: 14% 50%;
-}
-
-body.digital {
-    background-position: 14% 50%;
-}
-
-body.vocal {
-    background-position: 14% 50%;
-}
-
-body.music {
-    background-position: 14% 50%;
-}
-
-body.media {
-    background-position: 14% 50%;
-}
-
-body.code {
-    background-position: 14% 50%;
-}
-
-body.log {
-    background-position: 14% 50%;
 }
