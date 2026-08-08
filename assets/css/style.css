@@ -141,21 +141,25 @@ body.landing {
 }
 
 body.digital {
-    background-position: 16% 50%;
+    background-position: 14% 50%;
 }
 
 body.vocal {
-    background-position: 32% 50%;
+    background-position: 28% 50%;
 }
 
 body.music {
-    background-position: 48% 50%;
+    background-position: 42% 50%;
 }
 
 body.media {
-    background-position: 64% 50%;
+    background-position: 56% 50%;
+}
+
+body.code {
+    background-position: 70% 50%;
 }
 
 body.log {
-    background-position: 80% 50%;
+    background-position: 84% 50%;
 }
