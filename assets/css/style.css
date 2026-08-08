@@ -136,3 +136,26 @@ button:hover {
 .log p {
     margin-top: 10px;
 }
+body.landing {
+    background-position: 0% 50%;
+}
+
+body.digital {
+    background-position: 16% 50%;
+}
+
+body.vocal {
+    background-position: 32% 50%;
+}
+
+body.music {
+    background-position: 48% 50%;
+}
+
+body.media {
+    background-position: 64% 50%;
+}
+
+body.log {
+    background-position: 80% 50%;
+}
