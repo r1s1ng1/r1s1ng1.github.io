@@ -17,11 +17,10 @@ body {
     background-image: linear-gradient(
         135deg,
         hsl(0, 80%, 15%),
-        hsl(275, 70%, 15%),
         hsl(220, 80%, 15%)
     );
 
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
