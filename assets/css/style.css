@@ -14,21 +14,22 @@ body {
 
     text-align: center;
 
-    background-image: linear-gradient(
+background-image: linear-gradient(
     120deg,
-    hsl(0, 80%, 15%),
-    hsl(51, 80%, 15%),
-    hsl(103, 80%, 15%),
-    hsl(154, 80%, 15%),
-    hsl(206, 80%, 15%),
-    hsl(257, 80%, 15%),
-    hsl(309, 80%, 15%),
-    hsl(360, 80%, 15%)
+    hsl(275, 85%, 16%),
+    hsl(220, 90%, 15%),
+    hsl(185, 90%, 16%),
+    hsl(350, 85%, 15%),
+    hsl(325, 85%, 16%),
+    hsl(110, 75%, 15%),
+    hsl(50, 90%, 15%),
+    hsl(275, 85%, 16%)
 );
 
-    background-size: 700% 700%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+background-size: 700% 700%;
+background-position: 16% 50%;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 
 h1 {
@@ -138,31 +139,31 @@ button:hover {
     margin-top: 10px;
 }
 body.landing {
-    background-position: 0% 50%;
+    background-position: 16% 50%;
 }
 
 body.digital {
-    background-position: 14.28% 50%;
+    background-position: 16% 50%;
 }
 
 body.vocal {
-    background-position: 28.57% 50%;
+    background-position: 16% 50%;
 }
 
 body.music {
-    background-position: 42.85% 50%;
+    background-position: 16% 50%;
 }
 
 body.media {
-    background-position: 57.14% 50%;
+    background-position: 16% 50%;
 }
 
 body.code {
-    background-position: 71.42% 50%;
+    background-position: 16% 50%;
 }
 
 body.log {
-    background-position: 85.71% 50%;
+    background-position: 16% 50%;
 }
 body.loaded {
     opacity: 1;
