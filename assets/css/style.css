@@ -16,17 +16,19 @@ body {
 
 background-image: linear-gradient(
     120deg,
+    background-image: linear-gradient(
+    120deg,
     hsl(275, 80%, 16%),
-    hsl(220, 90%, 15%),
-    hsl(185, 90%, 16%),
+    hsl(175, 85%, 14%),
+    hsl(25, 90%, 16%),
     hsl(350, 85%, 15%),
-    hsl(325, 85%, 16%),
-    hsl(110, 75%, 15%),
-    hsl(50, 90%, 15%),
+    hsl(190, 90%, 16%),
+    hsl(220, 85%, 15%),
+    hsl(105, 75%, 15%),
     hsl(275, 80%, 16%)
 );
 background-size: 700% 700%;
-background-position: 16% 50%;
+background-position: 14% 50%;
 background-repeat: no-repeat;
 background-attachment: fixed;
 }
