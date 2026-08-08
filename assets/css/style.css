@@ -27,6 +27,8 @@ body {
 background-size: 700% 700%;
 background-repeat: no-repeat;
 background-attachment: fixed;
+opacity: 0;
+    transition: opacity 0.25s ease;
 }
 
 h1 {
