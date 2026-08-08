@@ -13,7 +13,7 @@ body {
     padding-bottom: calc(25px + env(safe-area-inset-bottom));
 
     text-align: center;
-}
+
 background-image: linear-gradient(
     120deg,
     hsl(275, 80%, 16%),  /* Purple */
