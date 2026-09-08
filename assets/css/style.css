@@ -129,3 +129,14 @@ button:hover {
 .log p {
     margin-top: 10px;
 }
+.photos {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.photos img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
