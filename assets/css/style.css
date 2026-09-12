@@ -30,7 +30,7 @@ body::before {
 
     background: linear-gradient(120deg, #E0115F, #000000, #00FFAD);
 
-    filter: blur(30px);
+    filter: blur(50px);
     z-index: -1;
 }
 
