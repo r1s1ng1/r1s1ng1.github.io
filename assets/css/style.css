@@ -45,10 +45,9 @@ footer {
     text-align: center;
     padding-bottom: 10px;
 }
-.footer {
+footer p {
     opacity: 0.3;
-    font-size: 0.8rem;
-    margin: 0px;
+    margin: 0;
 }
 a {
     display: block;
