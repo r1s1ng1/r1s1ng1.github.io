@@ -13,15 +13,8 @@ padding-top: calc(150px + env(safe-area-inset-top));
 padding-bottom: calc(20px + env(safe-area-inset-bottom));  
 
 text-align: center;  
-}
 
-body::before {
-content: "";
-position: fixed;
-filter: blur(30px);
-z-index:-1;
-
-background: linear-gradient(135deg, #E0115F, #000000, #00FFAD);  
+background: linear-gradient(120deg, #E0115F, #000000, #00FFAD);  
 
 background-size: 100% 100%;  
 background-repeat: no-repeat;  
@@ -44,6 +37,7 @@ margin-bottom: 5px;
 nav {
 margin-top: 50px;
 }
+
 footer {
 margin-top: auto;
 padding-top: 50px;
@@ -51,10 +45,12 @@ width: 100%;
 text-align: center;
 padding-bottom: 10px;
 }
+
 footer p {
 opacity: 0.2;
 margin: 0;
 }
+
 a {
 display: block;
 color: white;
