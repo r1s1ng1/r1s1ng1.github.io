@@ -45,6 +45,11 @@ footer {
     text-align: center;
     padding-bottom: 10px;
 }
+.footer-text {
+    opacity: 0.3;
+    font-size: 0.8rem;
+    margin: 0px;
+}
 a {
     display: block;
     color: white;
