@@ -25,12 +25,13 @@ body::before {
     content: "";
     position: fixed;
     inset: 0px;
-    width: 100lvw
-    height: 100lvh
+    width: 100lvw;
+    height: 100lvh;
+    inset: 0px;
 
     background: linear-gradient(135deg, #E0115F, #000000, #00FFAD);
 
-    filter: blur(30px);
+    filter: blur(50px);
     z-index: 0;
 }
 
