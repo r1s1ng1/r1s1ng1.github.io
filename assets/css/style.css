@@ -32,6 +32,7 @@ h1 {
 p {
     opacity: 0.5;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 nav {
@@ -42,6 +43,7 @@ footer {
     padding-top: 50px;
     width: 100%;
     text-align: center;
+    padding-bottom: 10px;
 }
 a {
     display: block;
