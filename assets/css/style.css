@@ -38,8 +38,8 @@ nav {
     margin-top: 50px;
 }
 footer {
-    margin-top: 100px;
-    margin-bottom: 0px;
+    margin-top: auto;
+    margin-bottom: 5px;
 }
 a {
     display: block;
