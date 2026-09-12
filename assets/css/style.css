@@ -37,7 +37,9 @@ p {
 nav {
     margin-top: 50px;
 }
-
+footer {
+    margin-top: auto;
+}
 a {
     display: block;
     color: white;
