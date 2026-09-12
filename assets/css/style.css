@@ -38,8 +38,11 @@ nav {
     margin-top: 50px;
 }
 footer {
-    margin-top: auto;
-    margin-bottom: 5px;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 a {
     display: block;
