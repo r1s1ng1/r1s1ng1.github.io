@@ -51,6 +51,7 @@ a {
     text-decoration: none;
     margin: 20px;
     font-size: 1.5rem;
+    opacity: 0.8;
 }
 
 a:visited {
