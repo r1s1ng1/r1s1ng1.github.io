@@ -23,7 +23,7 @@ body {
 
 body::before {
     content: "";
-    position: absolute;
+    position: static;
     inset: 0px;
 
     background: linear-gradient(120deg, #E0115F, #000000, #00FFAD);
