@@ -25,6 +25,8 @@ body::before {
     content: "";
     position: fixed;
     inset: 0px;
+    width: 100lvw
+    height: 100lvh
 
     background: linear-gradient(135deg, #E0115F, #000000, #00FFAD);
 
