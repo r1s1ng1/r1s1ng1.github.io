@@ -1,159 +1,150 @@
 body {
-    background: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    margin: 0;
+background: #000;
+color: #fff;
+font-family: Arial, sans-serif;
+min-height: 100vh;
+margin: 0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: calc(150px + env(safe-area-inset-top));
-    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+display: flex;  
+flex-direction: column;  
+justify-content: flex-start;  
+align-items: center;  
+padding-top: calc(150px + env(safe-area-inset-top));  
+padding-bottom: calc(20px + env(safe-area-inset-bottom));  
 
-    text-align: center;
+text-align: center;  
 
-    background: #000;
+background: linear-gradient(120deg, #E0115F, #000000, #00FFAD);  
 
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+background-size: 100% 100%;  
+background-repeat: no-repeat;  
+background-attachment: fixed;
 
-body::before {
-    content: "";
-    position: fixed;
-    background: linear-gradient(120deg, #E0115F, #000000, #00FFAD);
-
-    filter: blur(50px);
-    z-index= ;
 }
 
 h1 {
-    font-size: 3.5rem;
-    font-weight: 400;
-    margin: 0;
+font-size: 3.5rem;
+font-weight: 400;
+margin: 0;
 }
 
 p {
-    opacity: 0.5;
-    margin-top: 5px;
-    margin-bottom: 5px;
+opacity: 0.5;
+margin-top: 5px;
+margin-bottom: 5px;
 }
 
 nav {
-    margin-top: 50px;
+margin-top: 50px;
 }
 footer {
-    margin-top: auto;
-    padding-top: 50px;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 10px;
+margin-top: auto;
+padding-top: 50px;
+width: 100%;
+text-align: center;
+padding-bottom: 10px;
 }
 footer p {
-    opacity: 0.2;
-    margin: 0;
+opacity: 0.2;
+margin: 0;
 }
 a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    margin: 20px;
-    font-size: 1.5rem;
-    opacity: 0.8;
+display: block;
+color: white;
+text-decoration: none;
+margin: 20px;
+font-size: 1.5rem;
+opacity: 0.8;
 }
 
 a:visited {
-    color: white;
-    text-decoration: none;
+color: white;
+text-decoration: none;
 }
 
 a:hover {
-    opacity: 0.6;
+opacity: 0.6;
 }
 
 a:active {
-    opacity: 0.6;
+opacity: 0.6;
 }
 
-
 button {
-    all: unset;
+all: unset;
 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+display: inline-flex;  
+justify-content: center;  
+align-items: center;  
 
-    width: 30px;
-    height: 30px;
+width: 30px;  
+height: 30px;  
 
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 1.2rem;
+color: white;  
+font-family: Arial, sans-serif;  
+font-size: 1.2rem;  
 
-    cursor: pointer;
+cursor: pointer;
+
 }
 
 button:hover {
-    opacity: 0.6;
+opacity: 0.6;
 }
-
 
 .player-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 8px;
 }
 
-
 .player-controls button {
-    all: unset;
+all: unset;
 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+display: inline-flex;  
+justify-content: center;  
+align-items: center;  
 
-    width: 30px;
-    height: 30px;
+width: 30px;  
+height: 30px;  
 
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 1.2rem;
+color: white;  
+font-family: Arial, sans-serif;  
+font-size: 1.2rem;  
 
-    cursor: pointer;
+cursor: pointer;
+
 }
 
 .player-controls button:hover {
-    opacity: 0.6;
+opacity: 0.6;
 }
 .info {
-    margin-top: 50px;
+margin-top: 50px;
 }
 .log {
-    margin-top: 50px;
-    margin-bottom: 50px;
+margin-top: 50px;
+margin-bottom: 50px;
 }
 
 .log h2 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 0;
+font-size: 1.2rem;
+font-weight: 400;
+margin: 0;
 }
 
 .log p {
-    margin-top: 10px;
+margin-top: 10px;
 }
 .photos {
-    width: 100%;
-    margin-top: 0px;
+width: 100%;
+margin-top: 0px;
 }
 
 .photos img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-bottom: 0px;
+display: block;
+width: 100%;
+height: auto;
+margin-bottom: 0px;
 }
