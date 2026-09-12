@@ -31,7 +31,7 @@ body::before {
 
     background: linear-gradient(135deg, #E0115F, #000000, #00FFAD);
 
-    filter: blur(50px);
+    filter: blur(80px);
     z-index: 0;
 }
 
