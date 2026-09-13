@@ -210,20 +210,10 @@ margin-bottom: 0px;
 
     margin-top: calc(-150px - env(safe-area-inset-top));
 }
-
-body h1,
-body h1 + p {
+.page-heading {
     transition: opacity 0.6s ease;
 }
 
-.page-title-in {
-    opacity: 0;
-}
-
-.page-title-visible {
-    opacity: revert;
-}
-
-.page-title-out {
+.page-heading.fade-out {
     opacity: 0;
 }
