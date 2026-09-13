@@ -211,7 +211,8 @@ margin-bottom: 0px;
     margin-top: calc(-150px - env(safe-area-inset-top));
 }
 
-body h1 {
+body h1,
+body h1 + p {
     transition: opacity 0.6s ease;
 }
 
