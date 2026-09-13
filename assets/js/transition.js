@@ -19,7 +19,7 @@
 
         requestAnimationFrame(function () {
 
-            pageHeading.style.opacity = "";
+            pageHeading.style.opacity = "1";
 
         });
 
