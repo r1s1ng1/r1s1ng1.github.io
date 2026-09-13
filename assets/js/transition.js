@@ -98,6 +98,51 @@
 
 
     /*
+     * Browser Back transition
+     */
+
+    let goingBack = false;
+
+    if (!links.length) {
+
+        history.pushState({
+            transitionPage: true
+        }, "", window.location.href);
+
+
+        window.addEventListener("popstate", function () {
+
+            if (goingBack) {
+                return;
+            }
+
+            /*
+             * Temporarily restore the current page
+             * so the transition can play first.
+             */
+
+            history.pushState({
+                transitionPage: true
+            }, "", window.location.href);
+
+
+            hideTitle();
+
+            goingBack = true;
+
+
+            setTimeout(function () {
+
+                history.back();
+
+            }, 600);
+
+        });
+
+    }
+
+
+    /*
      * Initial title appearance
      */
 
