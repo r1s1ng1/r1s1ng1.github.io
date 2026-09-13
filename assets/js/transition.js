@@ -2,6 +2,32 @@
 
     const pageHeading = document.querySelector(".page-heading");
 
+    if (!pageHeading) {
+        return;
+    }
+
+
+    /*
+     * Page heading fade-in
+     */
+
+    function showTitle() {
+
+        pageHeading.classList.remove("fade-out");
+
+    }
+
+
+    /*
+     * Page heading fade-out
+     */
+
+    function hideTitle() {
+
+        pageHeading.classList.add("fade-out");
+
+    }
+
 
     /*
      * Landing-page links
@@ -32,57 +58,37 @@
 
             observer.observe(link);
 
-        });
 
-    }
+            link.addEventListener("click", function (event) {
 
+                event.preventDefault();
 
-    /*
-     * View Transitions
-     *
-     * Browsers that support this get the page transition.
-     * Other browsers simply use normal navigation.
-     */
-
-    if ("startViewTransition" in document) {
-
-        document.addEventListener("click", function (event) {
-
-            const link = event.target.closest("a");
-
-            if (!link) {
-                return;
-            }
-
-            if (link.target && link.target !== "_self") {
-                return;
-            }
-
-            if (link.origin !== window.location.origin) {
-                return;
-            }
-
-            if (link.hasAttribute("download")) {
-                return;
-            }
-
-            if (link.href === window.location.href) {
-                return;
-            }
+                const destination = link.href;
 
 
-            /*
-             * Let the browser handle the navigation,
-             * but wrap it in a View Transition.
-             */
+                /*
+                 * Scroll the actual page back to the top.
+                 */
 
-            event.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
-            const destination = link.href;
 
-            document.startViewTransition(function () {
+                /*
+                 * Fade the current page heading out.
+                 */
 
-                window.location.href = destination;
+                setTimeout(function () {
+
+                    hideTitle();
+
+                    setTimeout(function () {
+                        window.location.href = destination;
+                    }, 600);
+
+                }, 700);
 
             });
 
@@ -92,13 +98,65 @@
 
 
     /*
-     * Page heading appearance
+     * Browser Back transition
      */
 
-    if (pageHeading) {
+    let goingBack = false;
 
-        pageHeading.classList.remove("fade-out");
+    if (!links.length) {
+
+        history.pushState({
+            transitionPage: true
+        }, "", window.location.href);
+
+
+        window.addEventListener("popstate", function () {
+
+            if (goingBack) {
+                return;
+            }
+
+            /*
+             * Temporarily restore the current page
+             * so the transition can play first.
+             */
+
+            history.pushState({
+                transitionPage: true
+            }, "", window.location.href);
+
+
+            hideTitle();
+
+            goingBack = true;
+
+
+            setTimeout(function () {
+
+                history.back();
+
+            }, 600);
+
+        });
 
     }
+
+
+    /*
+     * Initial title appearance
+     */
+
+    showTitle();
+
+
+    /*
+     * Browser Back / Forward
+     */
+
+    window.addEventListener("pageshow", function () {
+
+        showTitle();
+
+    });
 
 })();
