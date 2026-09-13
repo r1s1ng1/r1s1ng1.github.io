@@ -1,162 +1,117 @@
 (function () {
 
-const pageHeading = document.querySelector(".page-heading");  
+    const pageHeading = document.querySelector(".page-heading");
 
-if (!pageHeading) {  
-    return;  
-}  
+    if (!pageHeading) {
+        return;
+    }
 
 
-/*  
- * Page heading fade-in  
- */  
+    /*
+     * Page heading fade-in
+     */
 
-function showTitle() {  
+    function showTitle() {
 
-    pageHeading.classList.remove("fade-out");  
+        pageHeading.classList.remove("fade-out");
 
-}  
+    }
 
 
-/*  
- * Page heading fade-out  
- */  
+    /*
+     * Page heading fade-out
+     */
 
-function hideTitle() {  
+    function hideTitle() {
 
-    pageHeading.classList.add("fade-out");  
+        pageHeading.classList.add("fade-out");
 
-}  
+    }
 
 
-/*  
- * Landing-page links  
- */  
+    /*
+     * Landing-page links
+     */
 
-const links = document.querySelectorAll(".landing-nav a");  
+    const links = document.querySelectorAll(".landing-nav a");
 
-if (links.length > 0) {  
+    if (links.length > 0) {
 
-    const observer = new IntersectionObserver(function (entries) {  
+        const observer = new IntersectionObserver(function (entries) {
 
-        entries.forEach(function (entry) {  
+            entries.forEach(function (entry) {
 
-            if (entry.isIntersecting) {  
-                entry.target.classList.add("visible");  
-            } else {  
-                entry.target.classList.remove("visible");  
-            }  
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                } else {
+                    entry.target.classList.remove("visible");
+                }
 
-        });  
+            });
 
-    }, {  
-        threshold: 0.5  
-    });  
+        }, {
+            threshold: 0.5
+        });
 
 
-    links.forEach(function (link) {  
+        links.forEach(function (link) {
 
-        observer.observe(link);  
+            observer.observe(link);
 
 
-        link.addEventListener("click", function (event) {  
+            link.addEventListener("click", function (event) {
 
-            event.preventDefault();  
+                event.preventDefault();
 
-            const destination = link.href;  
+                const destination = link.href;
 
 
-            /*  
-             * Scroll the actual page back to the top.  
-             */  
+                /*
+                 * Scroll the actual page back to the top.
+                 */
 
-            window.scrollTo({  
-                top: 0,  
-                behavior: "smooth"  
-            });  
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
 
-            /*  
-             * Fade the current page heading out.  
-             */  
+                /*
+                 * Fade the current page heading out.
+                 */
 
-            setTimeout(function () {  
+                setTimeout(function () {
 
-                hideTitle();  
+                    hideTitle();
 
-                setTimeout(function () {  
-                    window.location.href = destination;  
-                }, 600);  
+                    setTimeout(function () {
+                        window.location.href = destination;
+                    }, 600);
 
-            }, 700);  
+                }, 700);
 
-        });  
+            });
 
-    });  
+        });
 
-}  
+    }
 
 
-/*  
- * Browser Back transition  
- */  
+    /*
+     * Initial title appearance
+     */
 
-let goingBack = false;  
+    showTitle();
 
-if (!links.length) {  
 
-    history.pushState({  
-        transitionPage: true  
-    }, "", window.location.href);  
+    /*
+     * Browser Back / Forward
+     */
 
+    window.addEventListener("pageshow", function () {
 
-    window.addEventListener("popstate", function () {  
+        showTitle();
 
-        if (goingBack) {  
-            return;  
-        }  
-
-        /*  
-         * Temporarily restore the current page  
-         * so the transition can play first.  
-         */  
-
-        history.pushState({  
-            transitionPage: true  
-        }, "", window.location.href);  
-
-
-        hideTitle();  
-
-        goingBack = true;  
-
-
-        setTimeout(function () {  
-
-            history.back();  
-
-        }, 600);  
-
-    });  
-
-}  
-
-
-/*  
- * Initial title appearance  
- */  
-
-showTitle();  
-
-
-/*  
- * Browser Back / Forward  
- */  
-
-window.addEventListener("pageshow", function () {  
-
-    showTitle();  
-
-});
+    });
 
 })();
