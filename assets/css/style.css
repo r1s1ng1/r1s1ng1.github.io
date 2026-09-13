@@ -221,7 +221,7 @@ body h1 + p {
 }
 
 .page-title-visible {
-    opacity: 1;
+    opacity: revert;
 }
 
 .page-title-out {
