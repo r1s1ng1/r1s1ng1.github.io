@@ -1,161 +1,162 @@
 (function () {
 
-    const pageHeading = document.querySelector(".page-heading");
+const pageHeading = document.querySelector(".page-heading");  
 
-    if (!pageHeading) {
-        return;
-    }
+if (!pageHeading) {  
+    return;  
+}  
 
 
-    /*
-     * Page heading fade-in
-     */
+/*  
+ * Page heading fade-in  
+ */  
 
-}function showTitle() {
+function showTitle() {  
 
-        pageHeading.classList.remove("fade-out");
+    pageHeading.classList.remove("fade-out");  
 
-    }
+}  
 
-    /*
-     * Page heading fade-out
-     */
 
-    function hideTitle() {
+/*  
+ * Page heading fade-out  
+ */  
 
-        pageHeading.classList.add("fade-out");
+function hideTitle() {  
 
-    }
+    pageHeading.classList.add("fade-out");  
 
+}  
 
-    /*
-     * Landing-page links
-     */
 
-    const links = document.querySelectorAll(".landing-nav a");
+/*  
+ * Landing-page links  
+ */  
 
-    if (links.length > 0) {
+const links = document.querySelectorAll(".landing-nav a");  
 
-        const observer = new IntersectionObserver(function (entries) {
+if (links.length > 0) {  
 
-            entries.forEach(function (entry) {
+    const observer = new IntersectionObserver(function (entries) {  
 
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                } else {
-                    entry.target.classList.remove("visible");
-                }
+        entries.forEach(function (entry) {  
 
-            });
+            if (entry.isIntersecting) {  
+                entry.target.classList.add("visible");  
+            } else {  
+                entry.target.classList.remove("visible");  
+            }  
 
-        }, {
-            threshold: 0.5
-        });
+        });  
 
+    }, {  
+        threshold: 0.5  
+    });  
 
-        links.forEach(function (link) {
 
-            observer.observe(link);
+    links.forEach(function (link) {  
 
+        observer.observe(link);  
 
-            link.addEventListener("click", function (event) {
 
-                event.preventDefault();
+        link.addEventListener("click", function (event) {  
 
-                const destination = link.href;
+            event.preventDefault();  
 
+            const destination = link.href;  
 
-                /*
-                 * Scroll the actual page back to the top.
-                 */
 
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
+            /*  
+             * Scroll the actual page back to the top.  
+             */  
 
+            window.scrollTo({  
+                top: 0,  
+                behavior: "smooth"  
+            });  
 
-                /*
-                 * Fade the current page heading out.
-                 */
 
-                setTimeout(function () {
+            /*  
+             * Fade the current page heading out.  
+             */  
 
-                    hideTitle();
+            setTimeout(function () {  
 
-                    setTimeout(function () {
-                        window.location.href = destination;
-                    }, 600);
+                hideTitle();  
 
-                }, 700);
+                setTimeout(function () {  
+                    window.location.href = destination;  
+                }, 600);  
 
-            });
+            }, 700);  
 
-        });
+        });  
 
-    }
+    });  
 
+}  
 
-    /*
-     * Browser Back transition
-     */
 
-    let goingBack = false;
+/*  
+ * Browser Back transition  
+ */  
 
-    if (!links.length) {
+let goingBack = false;  
 
-        history.pushState({
-            transitionPage: true
-        }, "", window.location.href);
+if (!links.length) {  
 
+    history.pushState({  
+        transitionPage: true  
+    }, "", window.location.href);  
 
-        window.addEventListener("popstate", function () {
 
-            if (goingBack) {
-                return;
-            }
+    window.addEventListener("popstate", function () {  
 
-            /*
-             * Temporarily restore the current page
-             * so the transition can play first.
-             */
+        if (goingBack) {  
+            return;  
+        }  
 
-            history.pushState({
-                transitionPage: true
-            }, "", window.location.href);
+        /*  
+         * Temporarily restore the current page  
+         * so the transition can play first.  
+         */  
 
+        history.pushState({  
+            transitionPage: true  
+        }, "", window.location.href);  
 
-            hideTitle();
 
-            goingBack = true;
+        hideTitle();  
 
+        goingBack = true;  
 
-            setTimeout(function () {
 
-                history.back();
+        setTimeout(function () {  
 
-            }, 600);
+            history.back();  
 
-        });
+        }, 600);  
 
-    }
+    });  
 
+}  
 
-    /*
-     * Initial title appearance
-     */
 
-    showTitle();
+/*  
+ * Initial title appearance  
+ */  
 
+showTitle();  
 
-    /*
-     * Browser Back / Forward
-     */
 
-    window.addEventListener("pageshow", function () {
+/*  
+ * Browser Back / Forward  
+ */  
 
-        showTitle();
+window.addEventListener("pageshow", function () {  
 
-    });
+    showTitle();  
+
+});
 
 })();
