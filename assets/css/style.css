@@ -178,6 +178,7 @@ height: auto;
 margin-bottom: 0px;
 }
 .landing-nav a {
+    margin-top:100px;
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.8s ease, transform 0.8s ease;
