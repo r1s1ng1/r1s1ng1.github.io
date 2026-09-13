@@ -1,36 +1,47 @@
 (function () {
 
     const pageTitle = document.querySelector("body h1");
+const pageSubtitle = pageTitle ? pageTitle.nextElementSibling : null;
 
-    if (!pageTitle) {
-        return;
+if (!pageTitle) {
+    return;
+}
+
+
+function showTitle() {
+
+    pageTitle.classList.remove("page-title-out");
+    pageTitle.classList.add("page-title-in");
+
+    if (pageSubtitle && pageSubtitle.tagName === "P") {
+        pageSubtitle.classList.remove("page-title-out");
+        pageSubtitle.classList.add("page-title-in");
     }
 
-
-    /*
-     * Page title fade-in
-     */
-
-    function showTitle() {
-        pageTitle.classList.remove("page-title-out");
-        pageTitle.classList.add("page-title-in");
-
+    requestAnimationFrame(function () {
         requestAnimationFrame(function () {
-            requestAnimationFrame(function () {
-                pageTitle.classList.add("page-title-visible");
-            });
+
+            pageTitle.classList.add("page-title-visible");
+
+            if (pageSubtitle && pageSubtitle.tagName === "P") {
+                pageSubtitle.classList.add("page-title-visible");
+            }
+
         });
+    });
+}
+
+
+function hideTitle() {
+
+    pageTitle.classList.remove("page-title-visible");
+    pageTitle.classList.add("page-title-out");
+
+    if (pageSubtitle && pageSubtitle.tagName === "P") {
+        pageSubtitle.classList.remove("page-title-visible");
+        pageSubtitle.classList.add("page-title-out");
     }
-
-
-    /*
-     * Page title fade-out
-     */
-
-    function hideTitle() {
-        pageTitle.classList.remove("page-title-visible");
-        pageTitle.classList.add("page-title-out");
-    }
+}
 
 
     /*
