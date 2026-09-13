@@ -190,3 +190,10 @@ margin-bottom: 0px;
     opacity: 0.8;
     transform: translateY(0);
 }
+.landing {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
