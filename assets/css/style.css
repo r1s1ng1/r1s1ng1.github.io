@@ -177,3 +177,13 @@ width: 100%;
 height: auto;
 margin-bottom: 0px;
 }
+.landing-nav a {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.landing-nav a.visible {
+    opacity: 0.8;
+    transform: translateY(0);
+}
