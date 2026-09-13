@@ -199,7 +199,6 @@ margin-bottom: 0px;
     opacity: 0.8;
     transform: translateY(0);
 }
-
 .landing {
     position: relative;
     width: 100%;
@@ -211,41 +210,19 @@ margin-bottom: 0px;
 
     margin-top: calc(-150px - env(safe-area-inset-top));
 }
-html {
-    background: #000;
-}
 
-.page-transition {
-    position: fixed;
-    inset: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: #000;
-
-    opacity: 0;
-    pointer-events: none;
-
-    z-index: 9999;
-
+body h1 {
     transition: opacity 0.6s ease;
 }
 
-.page-transition.active {
-    opacity: 1;
-    pointer-events: all;
+.page-title-in {
+    opacity: 0;
 }
 
-.transition-title {
-    margin: 0;
-
-    color: #fff;
-
-    font-family: Arial, sans-serif;
-    font-size: 3.5rem;
-    font-weight: 400;
-
+.page-title-visible {
     opacity: 1;
+}
+
+.page-title-out {
+    opacity: 0;
 }
