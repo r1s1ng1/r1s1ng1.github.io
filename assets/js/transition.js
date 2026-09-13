@@ -8,7 +8,33 @@
 
 
     /*
-     * Landing-page link fade
+     * Page title fade-in
+     */
+
+    function showTitle() {
+        pageTitle.classList.remove("page-title-out");
+        pageTitle.classList.add("page-title-in");
+
+        requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+                pageTitle.classList.add("page-title-visible");
+            });
+        });
+    }
+
+
+    /*
+     * Page title fade-out
+     */
+
+    function hideTitle() {
+        pageTitle.classList.remove("page-title-visible");
+        pageTitle.classList.add("page-title-out");
+    }
+
+
+    /*
+     * Landing-page links
      */
 
     const links = document.querySelectorAll(".landing-nav a");
@@ -31,9 +57,11 @@
             threshold: 0.5
         });
 
+
         links.forEach(function (link) {
 
             observer.observe(link);
+
 
             link.addEventListener("click", function (event) {
 
@@ -41,25 +69,25 @@
 
                 const destination = link.href;
 
+
                 /*
                  * Scroll the actual page back to the top.
                  */
+
                 window.scrollTo({
                     top: 0,
                     behavior: "smooth"
                 });
 
+
                 /*
-                 * Wait for the scroll, then fade
-                 * the current page title out.
+                 * Fade the current page title out.
                  */
+
                 setTimeout(function () {
 
-                    pageTitle.classList.add("page-title-out");
+                    hideTitle();
 
-                    /*
-                     * Navigate after the title has faded.
-                     */
                     setTimeout(function () {
                         window.location.href = destination;
                     }, 600);
@@ -74,15 +102,20 @@
 
 
     /*
-     * Fade the page title in when a page loads.
+     * Initial title appearance
      */
 
-    pageTitle.classList.add("page-title-in");
+    showTitle();
 
-    requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
-            pageTitle.classList.add("page-title-visible");
-        });
+
+    /*
+     * Browser Back / Forward
+     */
+
+    window.addEventListener("pageshow", function () {
+
+        showTitle();
+
     });
 
 })();
