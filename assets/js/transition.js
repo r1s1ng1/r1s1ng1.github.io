@@ -11,22 +11,11 @@
      * Page heading fade-in
      */
 
-    if (pageHeading) {
+}function showTitle() {
 
-    pageHeading.style.opacity = "0";
+        pageHeading.classList.remove("fade-out");
 
-    requestAnimationFrame(function () {
-
-        requestAnimationFrame(function () {
-
-            pageHeading.style.opacity = "1";
-
-        });
-
-    });
-
-}
-
+    }
 
     /*
      * Page heading fade-out
