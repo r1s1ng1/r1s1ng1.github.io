@@ -191,7 +191,9 @@ margin-bottom: 0px;
     transform: translateY(0);
 }
 .landing {
-    min-height: calc(100vh - 150px);
+    height: 100lvh;
+    margin-top: calc(-150px - env(safe-area-inset-top));
+
     display: flex;
     flex-direction: column;
     justify-content: center;
