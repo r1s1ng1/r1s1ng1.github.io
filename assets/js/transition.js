@@ -1,47 +1,32 @@
 (function () {
 
-    const pageTitle = document.querySelector("body h1");
-const pageSubtitle = pageTitle ? pageTitle.nextElementSibling : null;
+    const pageHeading = document.querySelector(".page-heading");
 
-if (!pageTitle) {
-    return;
-}
-
-
-function showTitle() {
-
-    pageTitle.classList.remove("page-title-out");
-    pageTitle.classList.add("page-title-in");
-
-    if (pageSubtitle && pageSubtitle.tagName === "P") {
-        pageSubtitle.classList.remove("page-title-out");
-        pageSubtitle.classList.add("page-title-in");
+    if (!pageHeading) {
+        return;
     }
 
-    requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
 
-            pageTitle.classList.add("page-title-visible");
+    /*
+     * Page heading fade-in
+     */
 
-            if (pageSubtitle && pageSubtitle.tagName === "P") {
-                pageSubtitle.classList.add("page-title-visible");
-            }
+    function showTitle() {
 
-        });
-    });
-}
+        pageHeading.classList.remove("fade-out");
 
-
-function hideTitle() {
-
-    pageTitle.classList.remove("page-title-visible");
-    pageTitle.classList.add("page-title-out");
-
-    if (pageSubtitle && pageSubtitle.tagName === "P") {
-        pageSubtitle.classList.remove("page-title-visible");
-        pageSubtitle.classList.add("page-title-out");
     }
-}
+
+
+    /*
+     * Page heading fade-out
+     */
+
+    function hideTitle() {
+
+        pageHeading.classList.add("fade-out");
+
+    }
 
 
     /*
@@ -92,7 +77,7 @@ function hideTitle() {
 
 
                 /*
-                 * Fade the current page title out.
+                 * Fade the current page heading out.
                  */
 
                 setTimeout(function () {
