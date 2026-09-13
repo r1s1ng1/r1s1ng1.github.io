@@ -1,51 +1,19 @@
 (function () {
 
-    const currentTitle = document.querySelector("body h1");
+    const pageTitle = document.querySelector("body h1");
 
-    if (!currentTitle) {
+    if (!pageTitle) {
         return;
     }
 
-    /*
-     * Create the transition layer.
-     */
-    const transition = document.createElement("div");
-    transition.className = "page-transition";
-
-    const transitionTitle = document.createElement("h1");
-    transitionTitle.className = "transition-title";
-
-    transition.appendChild(transitionTitle);
-    document.body.appendChild(transition);
-
 
     /*
-     * If the previous page requested a transition,
-     * keep the screen black while this page finishes loading.
+     * Landing-page link fade
      */
-    const entering = sessionStorage.getItem("pageTransition");
 
-    if (entering) {
-        sessionStorage.removeItem("pageTransition");
+    const links = document.querySelectorAll(".landing-nav a");
 
-        transitionTitle.textContent = currentTitle.textContent;
-
-        transition.classList.add("active");
-
-        requestAnimationFrame(function () {
-            requestAnimationFrame(function () {
-                transition.classList.remove("active");
-            });
-        });
-    }
-
-
-    /*
-     * Landing-page category links.
-     */
-    const landingLinks = document.querySelectorAll(".landing-nav a");
-
-    if (landingLinks.length > 0) {
+    if (links.length > 0) {
 
         const observer = new IntersectionObserver(function (entries) {
 
@@ -63,49 +31,38 @@
             threshold: 0.5
         });
 
-
-        landingLinks.forEach(function (link) {
+        links.forEach(function (link) {
 
             observer.observe(link);
-
 
             link.addEventListener("click", function (event) {
 
                 event.preventDefault();
 
                 const destination = link.href;
-                const title = currentTitle.textContent;
 
                 /*
-                 * Tell the next page that it should
-                 * begin underneath the transition layer.
-                 */
-                sessionStorage.setItem("pageTransition", "enter");
-
-
-                /*
-                 * Scroll the ACTUAL page back to the top.
+                 * Scroll the actual page back to the top.
                  */
                 window.scrollTo({
                     top: 0,
                     behavior: "smooth"
                 });
 
-
                 /*
-                 * Wait for the scroll, then cover the screen.
+                 * Wait for the scroll, then fade
+                 * the current page title out.
                  */
                 setTimeout(function () {
 
-                    transitionTitle.textContent = title;
-                    transition.classList.add("active");
+                    pageTitle.classList.add("page-title-out");
 
                     /*
-                     * Give the title a moment before navigation.
+                     * Navigate after the title has faded.
                      */
                     setTimeout(function () {
                         window.location.href = destination;
-                    }, 700);
+                    }, 600);
 
                 }, 700);
 
@@ -117,15 +74,15 @@
 
 
     /*
-     * Fade the page in normally when there is
-     * no transition coming from another page.
+     * Fade the page title in when a page loads.
      */
-    if (!entering) {
 
+    pageTitle.classList.add("page-title-in");
+
+    requestAnimationFrame(function () {
         requestAnimationFrame(function () {
-            transition.classList.remove("active");
+            pageTitle.classList.add("page-title-visible");
         });
-
-    }
+    });
 
 })();
