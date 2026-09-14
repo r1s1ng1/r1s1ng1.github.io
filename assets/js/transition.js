@@ -30,12 +30,12 @@
 
 
     /*
-     * Landing-page links
+     * Landing-page elements
      */
 
-    const links = document.querySelectorAll(".landing-nav *");
+    const elements = document.querySelectorAll(".landing-nav a, .landing-nav p");
 
-    if (links.length > 0) {
+    if (elements.length > 0) {
 
         const observer = new IntersectionObserver(function (entries) {
 
@@ -54,43 +54,51 @@
         });
 
 
-        links.forEach(function (link) {
+        elements.forEach(function (element) {
 
-            observer.observe(link);
-
-
-            link.addEventListener("click", function (event) {
-
-                event.preventDefault();
-
-                const destination = link.href;
+            observer.observe(element);
 
 
-                /*
-                 * Scroll the actual page back to the top.
-                 */
+            /*
+             * Navigation links
+             */
 
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
+            if (element.tagName === "A") {
+
+                element.addEventListener("click", function (event) {
+
+                    event.preventDefault();
+
+                    const destination = element.href;
 
 
-                /*
-                 * Fade the current page heading out.
-                 */
+                    /*
+                     * Scroll the actual page back to the top.
+                     */
 
-                setTimeout(function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
 
-                    hideTitle();
+
+                    /*
+                     * Fade the current page heading out.
+                     */
 
                     setTimeout(function () {
-                        window.location.href = destination;
-                    }, 600);
 
-                }, 700);
+                        hideTitle();
 
-            });
+                        setTimeout(function () {
+                            window.location.href = destination;
+                        }, 600);
+
+                    }, 700);
+
+                });
+
+            }
 
         });
 
