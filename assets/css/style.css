@@ -203,13 +203,15 @@ margin-bottom: 0px;
     margin-top:10lvh;
 }
 
-.landing-nav * {
+.landing-nav a,
+.landing-nav p {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.landing-nav *.visible {
+.landing-nav a.visible,
+.landing-nav p.visible {
     opacity: 0.8;
     transform: translateY(0);
 }
