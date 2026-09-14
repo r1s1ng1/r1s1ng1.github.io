@@ -101,14 +101,24 @@ text-decoration: none;
 
 a:hover {
 opacity: 0.6;
+color: white;
+text-decoration: none;
 }
 
 a:active {
 opacity: 0.6;
+color: white;
+text-decoration: none;
 }
 
-*:focus {
+*:focus,
+*:focus-visible {
     outline: none;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
 }
 
 button {
