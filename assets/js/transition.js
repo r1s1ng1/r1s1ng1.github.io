@@ -33,7 +33,7 @@
      * Landing-page links
      */
 
-    const links = document.querySelectorAll(".landing-nav a");
+    const links = document.querySelectorAll(".landing-nav *");
 
     if (links.length > 0) {
 
