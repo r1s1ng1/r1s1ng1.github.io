@@ -63,8 +63,7 @@
              * Navigation links
              */
 
-            if (element.tagName === "A") {
-
+            if (element.tagName === "A" && !element.classList.contains("demo")) {
                 element.addEventListener("click", function (event) {
 
                     event.preventDefault();
