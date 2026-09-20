@@ -188,17 +188,12 @@ margin-top: 10px;
 }
 
 .photos {
-width: 100%;
-margin-top: 0px;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    margin: 20px auto;
 }
-
-.photos img {
-display: block;
-width: 100%;
-height: auto;
-margin-bottom: 0px;
-}
-
 .landing-nav{
     margin-top:10lvh;
 }
