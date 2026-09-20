@@ -190,9 +190,9 @@ margin-top: 10px;
 .photos {
     display: block;
     width: 80%;
-    max-width: 700px;
     height: auto;
     margin: 20px auto;
+    align-items: center;
 }
 .landing-nav{
     margin-top:10lvh;
