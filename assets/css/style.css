@@ -197,13 +197,13 @@ margin-top: 10px;
 
     -webkit-mask-image: radial-gradient(
         ellipse at center,
-        black 70%,
+        black 50%,
         transparent 100%
     );
 
     mask-image: radial-gradient(
         ellipse at center,
-        black 70%,
+        black 50%,
         transparent 100%
     );
 }
@@ -218,13 +218,13 @@ margin-top: 10px;
 
     -webkit-mask-image: radial-gradient(
         ellipse at center,
-        black 70%,
+        black 50%,
         transparent 100%
     );
 
     mask-image: radial-gradient(
         ellipse at center,
-        black 70%,
+        black 50%,
         transparent 100%
     );
 }    
