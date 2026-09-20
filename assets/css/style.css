@@ -188,17 +188,45 @@ margin-top: 10px;
 }
 
 .photos {
-    width: 80%;
+    width: 70%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20px;
+    opacity: 0.8;
+
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        black 70%,
+        transparent 100%
+    );
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        black 70%,
+        transparent 100%
+    );
 }
 .photos img {
     display: block;
-    width: 80%;
+    width: 70%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20px;
+    opacity: 0.8;
+
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        black 70%,
+        transparent 100%
+    );
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        black 70%,
+        transparent 100%
+    );
 }    
 .landing-nav{
     margin-top:10lvh;
