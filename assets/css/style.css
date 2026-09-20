@@ -270,3 +270,8 @@ margin-top: 10px;
     opacity: 0.8;
     transform: translateY(0);
 }
+.landing-nav .photos {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
