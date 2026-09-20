@@ -33,7 +33,7 @@
      * Landing-page elements
      */
 
-    const elements = document.querySelectorAll(".landing-nav a, .landing-nav p");
+    const elements = document.querySelectorAll(".landing-nav a, .landing-nav p, landing-nav .photos");
 
     if (elements.length > 0) {
 
