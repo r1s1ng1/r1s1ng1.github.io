@@ -263,6 +263,6 @@ margin-top: 10px;
     opacity: 0;
 }
 .landing-nav .photos.visible {
-    opacity: 0.9;
+    opacity: 0.8;
     transform: translateY(0);
 }
