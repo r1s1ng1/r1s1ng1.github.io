@@ -188,12 +188,16 @@ margin-top: 10px;
 }
 
 .photos {
+    width: 80%;
+    height: auto;
+    align-items: center;
+}
+.photos img {
     display: block;
     width: 80%;
     height: auto;
     margin: 20px auto;
-    align-items: center;
-}
+    
 .landing-nav{
     margin-top:10lvh;
 }
