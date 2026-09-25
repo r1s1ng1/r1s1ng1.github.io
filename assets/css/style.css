@@ -275,3 +275,14 @@ margin-top: 10px;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
+.feed-pfp {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
