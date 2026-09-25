@@ -286,3 +286,21 @@ margin-top: 10px;
     position: relative;
     z-index: 1;
 }
+.landing-nav h2.visible {
+    opacity: 0.8;
+    transform: translateY(0);
+}
+.landing-nav h2 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.landing-nav .feed-pfp.visible {
+    opacity: 0.8;
+    transform: translateY(0);
+}
+.landing-nav .feed-pfp {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
