@@ -18,6 +18,23 @@
     </div>
 </section>
 
+<div class="pin-gate" id="pinGate">
+
+    <input
+        type="password"
+        id="pinInput"
+        inputmode="numeric"
+        autocomplete="off"
+        maxlength="8"
+    >
+
+    <button id="pinButton">Enter</button>
+
+    <p id="pinError"></p>
+
+</div>
+
+<main class="protected-content" id="protectedContent">
     <nav class="landing-nav">
  
 <img class="feed-pfp" src="assets/pfp.jpg" alt="">
@@ -137,7 +154,13 @@ boring huh
 </p>
 </footer>
 
-<script src="../../assets/js/transition.js"></script>
 
+</main>
+
+<script src="../../assets/js/transition.js"></script>
+<script src="pin.js"></script>
+
+</body>
+</html>
 </body>
 </html>
