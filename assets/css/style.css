@@ -318,3 +318,53 @@ body.tv-static::before {
     pointer-events: none;
     opacity: 0.35;
 }
+.pin-gate {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+.pin-gate input {
+    width: 120px;
+    padding: 8px;
+
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+
+    text-align: center;
+
+    outline: none;
+}
+
+.pin-gate button {
+    margin-top: 20px;
+}
+
+#pinError {
+    min-height: 20px;
+    margin-top: 15px;
+}
+
+.protected-content {
+    display: none;
+
+    position: relative;
+    z-index: 1;
+
+    width: min(90%, 600px);
+    margin-top: 50px;
+}
+
+.protected-content.visible {
+    display: block;
+}
